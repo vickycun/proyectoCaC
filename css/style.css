@@ -150,13 +150,14 @@ footer li{
   background: #763468;
 }
 /* Apariencia de subscripción*/
-form-suscripcion {
+.form-suscripcion {
   display: flex;
   justify-content:space-around;
 }
 form-suscripcion input[type="email"] {
   border: 0;
-  width: 70%;
+  width: 60%;
+  padding: 5px;
 }
 input[type="submit"] {
   background-color: #763468;
@@ -164,6 +165,7 @@ input[type="submit"] {
   color: #fff;
   cursor: pointer;
   border: 0;
+  padding: 5px;
 }
 /* Apariencia del contenedor redes del footer */
 .contenedorredes {
@@ -492,10 +494,10 @@ p {
   text-align: right;
 }
 
-.text-center {
+
+.alineacion-centro{
   text-align: center;
 }
-
 
 .displayflexible {
   display: flex;
@@ -554,6 +556,102 @@ a {
   color: #685962;
 }
 
+.boton {
+  display: flex;
+  border: 1px ; 
+  padding: 10px; 
+  background-color: #363c46; 
+  color: #ffffff; 
+  text-decoration: none; 
+  text-transform: uppercase; 
+  font-family: 'Helvetica', sans-serif;
+  border-radius: 20px; 
+  align-items: center;
+  justify-content: center;
+}
+
+.boton:hover{
+  color: #f39cd2;
+}
+
+
+/*----------------------------------------------------------------*/
+/* Config formulario reservas                                     */
+/*----------------------------------------------------------------*/
+
+/*siguientes estilos para el formulario principal*/
+
+form{
+	width:auto;
+	padding:20px;
+	margin:auto;
+}
+
+form label{
+	width:200px;
+	font-weight:bold;
+	display:inline-block;
+  text-align: right;
+  padding: 10px;
+  vertical-align: top;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form input[type="number"]{
+	font: 1em sans-serif; 
+  width: 80%; 
+  height: calc(1.5em + 0.75rem + 2px);
+  font-weight: 400;
+  line-height: 2;
+  margin: 8px;
+  padding: 20px;
+  border: 1px solid #ced4da;
+  background-color: #fff;
+  background-clip: padding-box;
+  align-content: center;
+}
+textarea{
+  font: 1em sans-serif;
+  width: 80%;
+  height: 100px;
+  border: 1px solid #ced4da;
+  background-color: #fff;
+  margin: 8px;
+  resize: none;
+  display: inline-flex;
+  align-content: center;
+  padding: 5px;
+
+}
+.contenedor-radio {
+  flex-flow: row wrap;
+  background-color: #fff;
+  text-align: center;
+}
+form input[type="submit"]{
+	width:100%;
+	padding:8px 16px;
+	margin-top:32px;
+	border:1px solid #000;
+	border-radius:5px;
+	display:block;
+	color:#fff;
+	background-color:#000;
+} 
+
+form input[type="submit"]:hover{
+	cursor:pointer;
+  padding: 10px;
+}
+
+
+/*config btn*/
+.btn .btn-primario .btn-secundario{
+  color: #685962;
+}
+
 .btn {
   display: inline-block;
   text-align: center;
@@ -582,7 +680,7 @@ a {
   text-transform: uppercase; 
   font-family: 'Helvetica', sans-serif;
   border-radius: 20px; 
-  align-items: center;
+  text-align: center;
 }
 
 .boton:hover{
@@ -596,63 +694,6 @@ a {
   margin: 3px;
 }
 
-/*----------------------------------------------------------------*/
-/* Config formulario reservas                                     */
-/*----------------------------------------------------------------*/
-
-/*siguientes estilos para el formulario principal*/
-
-form{
-	width:auto;
-	padding:20px;
-	margin:auto;
-}
-
-form label{
-	width:200px;
-	font-weight:bold;
-	display:inline-block;
-  text-align: right;
-  padding: 10px;
-}
-
-form input[type="text"],
-form input[type="email"],
-form input[type="date"],
-form input[type="number"], textarea{
-	font: 1em sans-serif; 
-  width: 80%; 
-  height: calc(1.5em + 0.75rem + 2px);
-  font-weight: 400;
-  line-height: 2;
-  margin: 10px;
-  padding: 20px;
-  border: 1px solid #ced4da;
-  background-color: #fff;
-  background-clip: padding-box;
-  align-content: center;
-  color: #763468;
-}
-.contenedor-radio {
-  flex-flow: row wrap;
-  background-color: #fff;
-  text-align: center;
-}
-form input[type="submit"]{
-	width:100%;
-	padding:8px 16px;
-	margin-top:32px;
-	border:1px solid #000;
-	border-radius:5px;
-	display:block;
-	color:#fff;
-	background-color:#000;
-} 
-
-form input[type="submit"]:hover{
-	cursor:pointer;
-  padding: 10px;
-}
 
 
 /*----------------------------------------------------------------*/

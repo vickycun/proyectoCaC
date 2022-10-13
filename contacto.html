@@ -46,13 +46,43 @@
     </header>
     <!-- Fin del header -->
 
-    <!-- Inicio del formulario -->
+    <!-- Inicio del formulario Principal-->
+    <main>
+        <div id="contacto"  class="contenedor bg-light p-30">
+            <div>
+                <p class="tituloprincipal">Contactanos</p>
+            </div>
+        <div>
+        <form  action="#" method="post" name="contacto" id="contactoform" novalidate="novalidate">
+            <fieldset>
+                <legend class="titulosecundario">¿Qué nos querés preguntar?</legend>
+                <div>
+                    <label class="label" for="nombre">Nombre:</label>
+                    <input type="text" class="input" id="nombre"
+                    required="required" data-validation-required-message="Por favor ingrese su nombre" />
+                </div>
+                <div>
+                    <label class="label" for="apellido">Apellidos:</label>
+                    <input type="text" class="input" id="apellido"
+                    required="required" data-validation-required-message="Por favor ingrese su apellido" />
+                </div>
+                <div>
+                    <label class="label" for="email">E-mail:</label>
+                    <input type="email" class="input" id="email"
+                    required="required" data-validation-required-message="Por favor ingrese su email" />
+                </div>
+                <div>
+                    <label class="label" for="comentario">Comentario:</label>
+                    <textarea rows="15" cols="70" name="comentario" id="comentario" placeholder="Dejá tus comentarios..." required="required" data-validation-required-message="No deje su comentario vacio, dejenos conocer sus gustos..."></textarea>
+                </div>
+                <div class="alineacion-centro p-30">
+                    <button class="boton btn-secundario" type="submit" id="enviarconsulta">Enviar Consulta</button>
+                    <input class="boton btn-secundario" type="reset" value="Limpiar">
+                </div>
+            </form>
+    </div>
 
-    <div class="contenedor">
-
-    <p>Poner el formulario aca</p>
-
-
+    </main>
     </div> 
     
 
