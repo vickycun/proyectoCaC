@@ -453,23 +453,6 @@ p {
   background-color: #fff;
 }
 
-
-/*para aplicar paddings*/
-.p-5 {
-  padding: 5px;
-}
-.p-20 {
-  padding: 20px;
-}
-
-.p-30 {
-  padding: 30px;
-}
-.alineacion-centro{
-  text-align: center;
-}
-
-
 /*definir contenedor generico*/
 .contenedor {
   width: 100%;
@@ -481,37 +464,17 @@ p {
 
 .combinado { 
   grid-area: 1 / 1 / span 1 / span 2;
-
 }
 
 .combinado2 { 
   grid-area: 5 / 1 / span 1 / span 2;
-
 }
 
 .combinado3 { 
   grid-area: 6 / 1 / span 1 / span 2;
   text-align: center;
-
 }
 
-.fotoylogos {
-  display: grid;                        
-  grid-template-columns: auto auto;   
-  gap: 10px;                                      
-  padding: 10px;                           
-  border: 2px solid black;           
-  border-radius: 5px;
-}
-
-.img-bicis {
-  display:inline-block;
-  width: 50%;
-  max-width: 100%;
-  height:auto;
-  padding: 5px;
-  flex-wrap: nowrap;
-}
 
 .text-justify {
   text-align: justify;
@@ -533,6 +496,15 @@ p {
   text-align: center;
 }
 
+
+.displayflexible {
+  display: flex;
+}
+
+.columnaflex {
+  flex-direction: column !important;
+}
+
 /* Config imagenes */
 img {
   vertical-align: middle;
@@ -540,7 +512,23 @@ img {
   max-width: 100%;
   min-width: 480px;
 }
+.fotoylogos {
+  display: grid;                        
+  grid-template-columns: auto auto;   
+  gap: 10px;                                      
+  padding: 10px;                           
+  border: 2px solid black;           
+  border-radius: 5px;
+}
 
+.img-bicis {
+  display:inline-block;
+  width: 50%;
+  max-width: 100%;
+  height:auto;
+  padding: 5px;
+  flex-wrap: nowrap;
+}
 
 a {
   color: #ff33cc;
@@ -548,10 +536,6 @@ a {
   background-color: transparent;
 }
 
-
-.mb-30 {
-  margin-bottom: 30px;
-}
 
 /*para aplicar paddings*/
 .p-5 {
@@ -565,24 +549,7 @@ a {
   padding: 30px;
 }
 
-
-b, strong {
-  font-weight: bolder;
-}
-
-
-.bg-white {
-  background-color: #fff;
-}
-
-.displayflexible {
-  display: flex;
-}
-
-.columnaflex {
-  flex-direction: column !important;
-}
-
+/*config btn*/
 .btn .btn-primario .btn-secundario{
   color: #685962;
 }
@@ -600,7 +567,6 @@ b, strong {
   border-radius: 1;
 }
 
-
 .btn:hover {
   color: #6C757D;
   text-decoration: none;
@@ -617,15 +583,11 @@ b, strong {
   font-family: 'Helvetica', sans-serif;
   border-radius: 20px; 
   align-items: center;
-  
-
 }
 
 .boton:hover{
   color: #f39cd2;
 }
-
-
 
 /*para face e instagram*/
 .btn-cuadrado {
@@ -692,45 +654,6 @@ form input[type="submit"]:hover{
   padding: 10px;
 }
 
-
-/* BORRAR LO DE ARRIBA */
-
-/*
-.formulario {
-  margin: 0 auto;
-  padding: 0;
-  list-style-type: none;
-}
-
-
-label {
-  text-align: right;
-  display: inline-block;
-  width: 90px;
-  font: 1em sans-serif; 
-}
-
-
-input, textarea {
-  font: 1em sans-serif; 
-  width: 80%; 
-  height: calc(1.5em + 0.75rem + 2px);
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
-  border: 1px solid #ced4da;
-  background-color: #fff;
-  background-clip: padding-box;
-  align-content: center;
-}
-
-
-input:focus, textarea:focus {
-  border-color: #000;  
-}
-*/
 
 /*----------------------------------------------------------------*/
 /* mediaquerys con 3 puntos de corte                              */
