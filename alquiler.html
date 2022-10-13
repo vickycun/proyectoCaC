@@ -47,12 +47,11 @@
     
     <main>
     <!-- Inicio de la muestra de bicicletas y área de info y reserva -->
-    <div class="contenedor">
+    <div class="contenedor alineacion-centro">
         <br>
         <p class="tituloprincipal">Alquiler de bicicletas</p>
-        <p class="alineacion-centro">Bienvenido a nuestra sección de alquiler de bicicletas. Si estás planificando recorrer en bici la ciudad o los alrededores de Bariloche, este es tu sitio! </p>
-        <p class="alineacion-centro">
-        A continuación podrás ver los tipos de bicicletas que tenemos y realizar tu reserva en línea.</p>
+        <p>Bienvenido a nuestra sección de alquiler de bicicletas. Si estás planificando recorrer la ciudad o los alrededores de Bariloche en bici, este es tu sitio! </p>
+        <p>A continuación podrás ver los tipos de bicicletas que tenemos y realizar tu reserva en línea.</p>
     </div>
     
     <div class="contenedoralquilerbicis">
@@ -62,7 +61,7 @@
         </div>
         <div class="contenedor-bici">           
             <div class="textointeriordiv elemento-bici">
-                <p class="titulobicis"> MOUNTAIN BIKE</p>
+                <p class="titulointeriorcont"> MOUNTAIN BIKE</p>
                 <ul>
                     <li><i class="fa fa-angle-right p-5"></i>Bicicleta con cuadro de aluminio </i>
                     <li><i class="fa fa-angle-right p-5"></i>Frenos Delanteros y Traseros a Discos Mecanicos </i>
@@ -82,7 +81,7 @@
         </div>
         <div class="contenedor-bici">           
             <div class="textointeriordiv elemento-bici">
-                <p class="titulobicis"> BICICLETAS DE PASEO</p>
+                <p class="titulointeriorcont"> BICICLETAS DE PASEO</p>
                 <ul>
                     <li><i class="fa fa-angle-right p-5"></i>Bicicleta con cuadro triple butted </i>
                     <li><i class="fa fa-angle-right p-5"></i>Horquilla de suspensión </i>                        <li><i class="fa fa-angle-right p-5"></i>Horquilla de suspensión </i>
@@ -103,7 +102,7 @@
         </div>
         <div class="contenedor-bici">           
             <div class="textointeriordiv elemento-bici">
-                <p class="titulobicis"> BICICLETAS ELECTRICAS</p>
+                <p class="titulointeriorcont"> BICICLETAS ELECTRICAS</p>
                 <ul>
                     <li><i class="fa fa-angle-right p-5"></i>Con marco de U y paso a través </i>
                     <li><i class="fa fa-angle-right p-5"></i>Batería </i>
@@ -123,64 +122,58 @@
     <!--Fin detalle/muestra bicis -->
 
     <!--Inicio área reservas -->
-    <div id="reservas"  class="contenedor">
-            <div class="row ">
-                <div class="col mb-30">
-                    <div class="bg-light p-30  h5">
-                        <p class="titulosecundario">Area de reservas</p>
-                        <div class="contenedor">
-                            <h4 class="mb-3">Inicia tu reseva</h4>
-                            <!--Inicio formulario reservas -->
-                            <div class="contenedorform">
-                                    <div class="formulario bg-light p-30">
-                                        <form  action="#" method="post" name="reservacion" id="reservasform" novalidate="novalidate">
-                                            <div class="p-5">
-                                                <label class="label" for="name">Nombre:</label>
-                                                <input type="text" class="input" id="nombre"
-                                                    required="required" data-validation-required-message="Por favor ingrese su nombre" />
-                                            </div>
-                                            <div class="p-5">
-                                                <label class="label" for="apellido">Apellido:</label>
-                                                <input type="text" class="input" id="apellido"
-                                                    required="required" data-validation-required-message="Por favor ingrese su apellido" />
-                                            </div>
-                                            <div class="p-5">
-                                                <label class="label" for="telefono">Teléfono:</label>
-                                                <input type="text" class="input" id="telefono"
-                                                    required="required" data-validation-required-message="Por favor ingrese su teléfono" />
-                                            </div>
-                                            <div class="p-5">
-                                                <label class="label" for="email">E-mail:</label>
-                                                <input type="email" class="input" id="email"
-                                                    required="required" data-validation-required-message="Por favor ingrese su email" />
-                                            </div>
-                                            <div class="p-5">
-                                                <label class="label" for="bicicleta">Bicicleta:</label>
-                                                <input type="email" class="input" id="bicicleta"
-                                                    required="required" data-validation-required-message="Por favor ingrese la bicicleta a reservar" />
-                                            </div>
-                                            <div class="p-5">      
-                                                <label class="label" for="cantidad">Cantidad:</label>
-                                                <input type="email" class="input" id="cantidad" placeholder="1"
-                                                    required="required" data-validation-required-message="Por favor ingrese la cantidad de bicicletas" />
-                                            </div>
-                                            <div class="p-5">
-                                                <label class="label" for="circuito">Cantidad:</label>
-                                                <input type="email" class="input" id="circuito" placeholder="Circuito"
-                                                    required="required" data-validation-required-message="Por favor ingrese un circuito" />
-                                            </div>
-                                            <div class="formulario p-20">
-                                                <button class="boton btn-secundario" type="submit" id="enviarreserva">Realizar reserva</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
+    <div id="reservas"  class="contenedor bg-light p-30">
+        <div>
+            <p class="tituloprincipal">Area de reservas</p>
+        </div>
+        <div>
+        
+        <form class="form" action="#" method="get" name="reservacion" id="reservasform">
+            <fieldset>
+                <legend>Inicia tu reserva:</legend>
+                    <div>
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="nombre" placeholder="Juan" >
+                    </div>
+                    <div>
+                        <label for="apellido">Apellidos:</label>
+                        <input type="text" id="apellido" placeholder="Pérez">
+                    </div>
+                    <div>
+                        <label for="telefono">Teléfono:</label>
+                        <input type="text" id="telefono">
+                    </div>
+                    <div>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" placeholder="juanperez@mail.com">
+                    </div>
+                    <div>      
+                        <label for="Fecha">Fecha:</label>
+                        <input type="date" id="fecha" >
+                    </div>
+                    <div>
+                        <label for="bicicleta">Bicicleta:</label>
+                        <div class="contenedor-radio">
+                            <p> <input type='radio' name='bici' value='bicimountain'> Mountain Bike </p>
+                            <p> <input type='radio' name='bici' value='bicipaseo'> De paseo </p>
+                            <p> <input type='radio' name='bici' value='bicielectrica'> Eléctrica </p>
                         </div>
                     </div>
-                </div>
-            </div>
+                    <div>      
+                        <label for="cantidad">Cantidad:</label>
+                        <input type="number" id="cantidad" placeholder="1">
+                    </div>
+                    <div>
+                        <label>Comentarios:</label>	
+                        <textarea class="p-30" name="mensaje" for="mensaje" placeholder="Deje sus comentarios"></textarea>
+                    </div>
+                    <div class="form alineacion-centro">
+                        <button class="boton btn-secundario" type="submit" id="enviarreserva">Realizar reserva</button>
+                    </div>
+            </fieldset>
+            </form>
         </div>
+    </div>
     </main>
     
     <!-- Contenido del footer IGUAL PARA TODAS LAS PAGINAS DEL SITIO -->
@@ -201,7 +194,7 @@
                         <li><a href="index.html"><i class="fa fa-angle-right p-5"></i>Inicio</a></li>
                         <li><a href="alquiler.html"><i class="fa fa-angle-right p-5"></i>Alquiler</a></li>
                         <li><a href="donde.html"><i class="fa fa-angle-right p-5"></i>Donde ir</a></li>
-                        <li><a href="index.html"><i class="fa fa-angle-right p-5"></i>Contacto</a></li>
+                        <li><a href="contacto.html"><i class="fa fa-angle-right p-5"></i>Contacto</a></li>
                     </ul>
                 </nav> 
         </div>

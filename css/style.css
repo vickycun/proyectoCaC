@@ -125,19 +125,15 @@ footer {
   margin: 1 auto;
   max-width: auto;
   justify-items: center;
-  
 }
 footer ul{
-  padding:2px;
-  
+  padding:2px; 
 }
 footer li{
   list-style: none;
-  
 }
 .elemento-footer p{
   margin: 1rem 0;
-  
 }
 .texto-footer li{
   line-height: 2;
@@ -169,7 +165,6 @@ input[type="submit"] {
   cursor: pointer;
   border: 0;
 }
-
 /* Apariencia del contenedor redes del footer */
 .contenedorredes {
   display: flex;
@@ -239,8 +234,9 @@ input[type="submit"] {
   color: #fff;
 }
 
+
 /*----------------------------------------------------------------*/
-/* Configuración del contenedor muestras de circuitos            */
+/* Configuración del contenedor muestras de circuitos             */
 /*----------------------------------------------------------------*/
 .diascircuitos {
   display: grid;                        
@@ -262,8 +258,8 @@ input[type="submit"] {
 .fotologo {
   display: grid;                        
   grid-template-columns: 2fr 1fr;   
-  gap: 50px;             
-  align-items: center;
+  gap: 20px;             
+  align-items:flex-start;
 }
 .imgcircuitos {
   display: inline-flex;
@@ -281,7 +277,7 @@ input[type="submit"] {
   color: #000; 
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 0.8em;
-  flex: auto;
+  flex:content;
 }
 .contenedor-mapa {
   display: block;
@@ -289,6 +285,56 @@ input[type="submit"] {
   border: 3px solid #2d2e2e;
   width: 640px;
   height: 480px;
+}
+
+
+/*----------------------------------------------------------------*/
+/* Configuración del index                                        */
+/*----------------------------------------------------------------*/
+
+/* config del carrousel */
+
+.slider-frame {
+  width: 100%;
+  height: 100%;
+  margin:2px auto 0;
+  overflow: hidden;
+  opacity: 0.7;
+  }
+  
+  .slider-frame ul {
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: slide 20s infinite alternate ease-in-out;
+  }
+  
+  .slider-frame li {
+  width: 100%;
+  list-style: none;
+  }
+  
+  .slider-frame img {
+  width: 100%;
+  }
+  
+/* resto config del index */
+.elegirnos {
+  display: grid;                        
+  grid-template-columns: 1fr 1fr;   
+  gap: 20px;    
+  flex-flow: row wrap;     
+  padding: 20px;      
+}
+
+.motivos {
+  display: inline-flex;
+  background-color: #fff;         
+  padding:15px;
+  border: 1.5px dotted black;   
+  border-radius: 5px;
+  text-align: center;
+  flex-flow: row wrap;      
 }
 
 
@@ -334,7 +380,7 @@ input[type="submit"] {
   text-align: center;
   margin: 2px;
 }
-.titulocircuitos {
+.titulointeriorcont {
   color: #000; 
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 1em;
@@ -365,6 +411,13 @@ input[type="submit"] {
   font-size: 0.8em;
   text-align: justify
 }
+.textosecundario {
+  color: #363c46;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.2em;
+  text-align: justify;
+}
+
 .texto-oscuro {
   color: #121312;
 }
@@ -426,16 +479,6 @@ p {
   margin-left: auto;
 }
 
-
-.elegirnos {
-  display: grid;                        
-  grid-template-columns: auto auto;   
-  gap: 20px;                              
-  padding: 5px;          
-  margin-left: 80px;  
-  margin-right: 80px;                   
-}
-
 .combinado { 
   grid-area: 1 / 1 / span 1 / span 2;
 
@@ -468,40 +511,6 @@ p {
   height:auto;
   padding: 5px;
   flex-wrap: nowrap;
-}
-.motivos {
-  display: flex;
-  background-color: #fff;         
-  padding:25px;
-  border: 1.5px dotted black;   
-  border-radius: 5px;
-  text-align: center;
-  position: relative;       
-}
-
-.slider-frame {
-width: 1280px;
-  height: 400px;
-margin:2px auto 0;
-overflow: hidden;
-  opacity: 0.7;
-}
-
-.slider-frame ul {
-display: flex;
-padding: 0;
-width: 400%;
-
-animation: slide 20s infinite alternate ease-in-out;
-}
-
-.slider-frame li {
-width: 100%;
-list-style: none;
-}
-
-.slider-frame img {
-width: 100%;
 }
 
 .text-justify {
@@ -554,26 +563,6 @@ a {
 
 .p-30 {
   padding: 30px;
-}
-
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-  justify-content: space-between;
-}
-
-.col{
-  position: relative;
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  flex-basis: 0;
-  flex-grow: 1;
-  max-width: 100%;
-  justify-content: center;
 }
 
 
@@ -645,8 +634,68 @@ b, strong {
   margin: 3px;
 }
 
+/*----------------------------------------------------------------*/
+/* Config formulario reservas                                     */
+/*----------------------------------------------------------------*/
 
 /*siguientes estilos para el formulario principal*/
+
+form{
+	width:auto;
+	padding:20px;
+	margin:auto;
+}
+
+form label{
+	width:200px;
+	font-weight:bold;
+	display:inline-block;
+  text-align: right;
+  padding: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form input[type="number"], textarea{
+	font: 1em sans-serif; 
+  width: 80%; 
+  height: calc(1.5em + 0.75rem + 2px);
+  font-weight: 400;
+  line-height: 2;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ced4da;
+  background-color: #fff;
+  background-clip: padding-box;
+  align-content: center;
+  color: #763468;
+}
+.contenedor-radio {
+  flex-flow: row wrap;
+  background-color: #fff;
+  text-align: center;
+}
+form input[type="submit"]{
+	width:100%;
+	padding:8px 16px;
+	margin-top:32px;
+	border:1px solid #000;
+	border-radius:5px;
+	display:block;
+	color:#fff;
+	background-color:#000;
+} 
+
+form input[type="submit"]:hover{
+	cursor:pointer;
+  padding: 10px;
+}
+
+
+/* BORRAR LO DE ARRIBA */
+
+/*
 .formulario {
   margin: 0 auto;
   padding: 0;
@@ -654,8 +703,6 @@ b, strong {
 }
 
 
-
- /* Para dar tamaño y alineación uniforme */
 label {
   text-align: right;
   display: inline-block;
@@ -663,7 +710,7 @@ label {
   font: 1em sans-serif; 
 }
 
-/* Para asegurarse de que todos los campos de texto tienen la misma configuración de letra y tamaño uniforme del campo de txto */
+
 input, textarea {
   font: 1em sans-serif; 
   width: 80%; 
@@ -679,51 +726,11 @@ input, textarea {
   align-content: center;
 }
 
-/* Para dar un destacado adicional para elementos que tienen el cursor */ 
+
 input:focus, textarea:focus {
   border-color: #000;  
 }
-
-
-
-/*siguientes estilos para el formulario principal*/
-.formulario {
-  margin: 0 auto;
-  padding: 0;
-  list-style-type: none;
-}
-
-
-
- /* Para dar tamaño y alineación uniforme */
-label {
-  text-align: right;
-  display: inline-block;
-  width: 90px;
-  font: 1em sans-serif; 
-}
-
-/* Para asegurarse de que todos los campos de texto tienen la misma configuración de letra y tamaño uniforme del campo de txto */
-input, textarea {
-  font: 1em sans-serif; 
-  width: 80%; 
-  height: calc(1.5em + 0.75rem + 2px);
-  font-weight: 400;
-  line-height: 1.5;
-  margin: 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
-  border: 1px solid #ced4da;
-  background-color: #fff;
-  background-clip: padding-box;
-  align-content: center;
-}
-
-/* Para dar un destacado adicional para elementos que tienen el cursor */ 
-input:focus, textarea:focus {
-  border-color: #000;  
-}
-
+*/
 
 /*----------------------------------------------------------------*/
 /* mediaquerys con 3 puntos de corte                              */
@@ -731,11 +738,10 @@ input:focus, textarea:focus {
 
 
 /* Punto de corte para pantallas 1*/
-@media only screen and (max-width: 1000px) and (min-width: 801px){
+@media only screen and (max-width: 1200px) and (min-width: 801px){
   .contenedorheadergrid{
       /* Usamos un atajo para definir 2 filas / 2 columna */
-      grid-template: auto auto / 50% 50%; 
-
+      grid-template: auto  / 50% 50%; 
   }
   .navegacion ul {
       flex-wrap: nowrap;
@@ -809,7 +815,9 @@ input:focus, textarea:focus {
 .fotologo {             
   grid-template-columns: 1fr; 
 }
-
+.elegirnos {
+  grid-template: auto / 100%; 
+}
 }
 
 /* Punto de corte para pantallas tipo celular */
@@ -862,6 +870,11 @@ input:focus, textarea:focus {
     width: 90%;
     height: 90%;
   }
+  .elegirnos {
+    grid-template: auto / 100%; 
+  }
+
+  
 }
 
 @keyframes slide {
