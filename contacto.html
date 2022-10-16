@@ -53,34 +53,41 @@
                 <p class="tituloprincipal">Contactanos</p>
             </div>
         <div>
-        <form  action="#" method="post" name="contacto" id="contactoform" novalidate="novalidate">
+        <form  action="https://formsubmit.co/baribikeok@gmail.com" method="post" name="contacto" id="contacto" novalidate="novalidate">
             <fieldset>
                 <legend class="titulosecundario">¿Qué nos querés preguntar?</legend>
                 <div>
                     <label class="label" for="nombre">Nombre:</label>
-                    <input type="text" class="input" id="nombre"
+                    <input type="text" class="input" id="nombre" name="nombre"
                     required="required" data-validation-required-message="Por favor ingrese su nombre" />
                 </div>
                 <div>
                     <label class="label" for="apellido">Apellidos:</label>
-                    <input type="text" class="input" id="apellido"
+                    <input type="text" class="input" id="apellido" name="apellido"
                     required="required" data-validation-required-message="Por favor ingrese su apellido" />
                 </div>
                 <div>
                     <label class="label" for="email">E-mail:</label>
-                    <input type="email" class="input" id="email"
+                    <input type="email" class="input" id="email" name="e-mail"
                     required="required" data-validation-required-message="Por favor ingrese su email" />
                 </div>
                 <div>
                     <label class="label" for="comentario">Comentario:</label>
                     <textarea rows="15" cols="70" name="comentario" id="comentario" placeholder="Dejá tus comentarios..." required="required" data-validation-required-message="No deje su comentario vacio, dejenos conocer sus gustos..."></textarea>
                 </div>
-                <div class="alineacion-centro p-30">
+                <div class="displayflexible p-30">
                     <button class="boton btn-secundario" type="submit" id="enviarconsulta">Enviar Consulta</button>
-                    <input class="boton btn-secundario" type="reset" value="Limpiar">
+                    <button class="boton btn-secundario" type="reset" id="Limpiar">Limpiar</button>
                 </div>
+				<input type="hidden" name="_next" value="https://proycac.netlify.app/contacto.html">
             </form>
     </div>
+
+    <!------------------------------------------------------------
+          Invocamos al js para validar el formulario
+     ------------------------------------------------------------>
+
+    <script src="js/formulario.js"></script>
 
     </main>
     </div> 

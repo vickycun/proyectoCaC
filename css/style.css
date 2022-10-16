@@ -500,7 +500,8 @@ p {
 }
 
 .displayflexible {
-  display: flex;
+  display: inline-flex;
+  
 }
 
 .columnaflex {
@@ -551,32 +552,9 @@ a {
   padding: 30px;
 }
 
-/*config btn*/
-.btn .btn-primario .btn-secundario{
-  color: #685962;
-}
-
-.boton {
-  display: flex;
-  border: 1px ; 
-  padding: 10px; 
-  background-color: #363c46; 
-  color: #ffffff; 
-  text-decoration: none; 
-  text-transform: uppercase; 
-  font-family: 'Helvetica', sans-serif;
-  border-radius: 20px; 
-  align-items: center;
-  justify-content: center;
-}
-
-.boton:hover{
-  color: #f39cd2;
-}
-
 
 /*----------------------------------------------------------------*/
-/* Config formulario reservas                                     */
+/* Config formulario reservas y contacto                          */
 /*----------------------------------------------------------------*/
 
 /*siguientes estilos para el formulario principal*/
@@ -631,38 +609,32 @@ textarea{
   text-align: center;
 }
 form input[type="submit"]{
-	width:100%;
-	padding:8px 16px;
+	width:90%;
+	padding:8px 10px;
 	margin-top:32px;
 	border:1px solid #000;
 	border-radius:5px;
-	display:block;
+	display:inline-block;
 	color:#fff;
-	background-color:#000;
+	background-color:#000;  
+	transition: .3s ease all;
 } 
 
 form input[type="submit"]:hover{
 	cursor:pointer;
-  padding: 10px;
+  padding: 5px;
 }
 
+
+.input:focus {
+	border: 2px solid #c44fba;
+	outline: none;
+	box-shadow: 2px 0px 5px #6C757D;
+}
 
 /*config btn*/
 .btn .btn-primario .btn-secundario{
   color: #685962;
-}
-
-.btn {
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  user-select: auto;
-  background-color:  #e2df1f;
-  border: 1px;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 1;
 }
 
 .btn:hover {
@@ -671,22 +643,23 @@ form input[type="submit"]:hover{
 }
 
 .boton {
-  display: inline-flex;
+  display: inline-flexbox;
   border: 1px ; 
-  padding: 10px; 
+  padding: 10px;
+  margin: 10px; 
   background-color: #363c46; 
   color: #ffffff; 
   text-decoration: none; 
   text-transform: uppercase; 
   font-family: 'Helvetica', sans-serif;
   border-radius: 20px; 
-  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .boton:hover{
   color: #f39cd2;
 }
-
 /*para face e instagram*/
 .btn-cuadrado {
   width: 40px;
