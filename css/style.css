@@ -110,6 +110,26 @@ footer {
 }
 
 
+/*--------------------------------------------------------------------------------*/
+/* Configuración del FOOTER -- contactenos, enlaces y suscripcion con grid y flex */
+/*--------------------------------------------------------------------------------*/
+
+/* Apariencia de la API */
+
+/* ID para meter en el div los datos del APIRest del tiempo*/
+#clima {
+  width:100%;
+  max-height: 30px;
+  background: linear-gradient(rgb(19, 160, 178), rgb(104, 233, 245), rgb(127, 176, 183));
+  font-style: italic;
+  font-variant: small-caps;
+  text-transform: capitalize;
+  color: rgba(1, 1, 21, 0.617);
+  text-align: center;
+  font-size: 0.85em;
+  padding: 5px;
+  font-family: 'Franklin Gothic Medium';
+}
 
 /*--------------------------------------------------------------------------------*/
 /* Configuración del FOOTER -- contactenos, enlaces y suscripcion con grid y flex */
