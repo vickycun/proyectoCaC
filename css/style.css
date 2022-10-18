@@ -111,15 +111,15 @@ footer {
 
 
 /*--------------------------------------------------------------------------------*/
-/* Configuración del FOOTER -- contactenos, enlaces y suscripcion con grid y flex */
+/* Configuración de la API */
 /*--------------------------------------------------------------------------------*/
-
-/* Apariencia de la API */
 
 /* ID para meter en el div los datos del APIRest del tiempo*/
 #clima {
+  display:inline-block;
   width:100%;
-  max-height: 30px;
+  height:30px;
+  max-height: 40px;
   background: linear-gradient(rgb(19, 160, 178), rgb(104, 233, 245), rgb(127, 176, 183));
   font-style: italic;
   font-variant: small-caps;
@@ -831,7 +831,11 @@ form input[type="submit"]:hover{
     grid-template: auto / 100%; 
   }
 
-  
+  #clima {
+    display:inline-flex;
+    font-size: auto;
+    padding: 5px;
+  }
 }
 
 @keyframes slide {
