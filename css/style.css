@@ -832,7 +832,8 @@ form input[type="submit"]:hover{
   }
 
   #clima {
-    display:inline-block;
+    display:inline-flex;
+    font-size: auto;
     height: 50px;
   }
 }
