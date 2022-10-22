@@ -1,6 +1,4 @@
 const miClima = document.querySelector("#clima");
-const imgClima = document.createElement("img");
-
 
 fetch("https://api.weatherbit.io/v2.0/current?lang=es&city=Bariloche&country=AR&key=06f893dddd5c48a0a9855c22218cbc7b")
   .then((response) => {
@@ -9,11 +7,15 @@ fetch("https://api.weatherbit.io/v2.0/current?lang=es&city=Bariloche&country=AR&
     }
     return response.json();
   })
-  .then((dat) => {  
-    miClima.innerHTML = `El clima en ${dat.data[0].city_name} es de ${dat.data[0].temp} grados |  ${dat.data[0].weather.description}`;
+  .then((dat) => {
+    const textClima = document.createElement("p");
+    const imgClima = document.createElement("img");
+    imgClima.id = "icon-clima"; 
     imgClima.src = `img/icons/${dat.data[0].weather.icon}.png`;
-    imgClima.id = "icon-clima";
-    miClima.appendChild(imgClima);
+    imgClima.height = "24";
+    textClima.innerHTML = `El clima en ${dat.data[0].city_name} es de ${dat.data[0].temp} grados |  ${dat.data[0].weather.description}`;
+    textClima.appendChild(imgClima);
+    miClima.appendChild(textClima);
   })
   .catch((error) => {
     miClima.innerHTML = "El servicio del clima en Bariloche no está disponible en este momento.";
