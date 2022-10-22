@@ -13,7 +13,7 @@ fetch("https://api.weatherbit.io/v2.0/current?lang=es&city=Bariloche&country=AR&
 
     imgElement.id = "icon-clima"; 
     imgElement.src = `img/icons/${dat.data[0].weather.icon}.png`;
-    imgElement.width = "24";
+    imgElement.height = "24";
     
     textClima.innerHTML = `El clima en ${dat.data[0].city_name} es de ${dat.data[0].temp} grados |  ${dat.data[0].weather.description}`;
     textClima.appendChild(imgElement);
