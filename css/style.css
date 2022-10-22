@@ -116,7 +116,6 @@ footer {
 
 /* ID para meter en el div los datos del APIRest del tiempo*/
 #clima {
-  display: inline-flexbox;                        
   width:100%;
   height:auto;
   background: linear-gradient(rgb(19, 160, 178), rgb(104, 233, 245), rgb(127, 176, 183));
@@ -130,11 +129,8 @@ footer {
 
 /* id de la imagen dinámica del clima */
 #icon-clima {
- display:grid;
- column-width: 90px;
- vertical-align: middle;
-
- 
+  width: 24px;
+  height: 24px;
 }
  
 /*--------------------------------------------------------------------------------*/
