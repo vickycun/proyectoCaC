@@ -130,10 +130,10 @@ footer {
 
 /* id de la imagen dinámica del clima */
 #icon-clima {
- display:flex;
+ display:grid;
+ column-width: 90px;
  vertical-align: middle;
- height: 24px;
- width: 20px; 
+
  
 }
  
