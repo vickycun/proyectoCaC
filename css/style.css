@@ -118,8 +118,7 @@ footer {
 #clima {
   display:inline-block;
   width:100%;
-  height:30px;
-  max-height: 50px;
+  height:auto;
   background: linear-gradient(rgb(19, 160, 178), rgb(104, 233, 245), rgb(127, 176, 183));
   font-style: italic;
   font-variant: small-caps;
@@ -131,6 +130,12 @@ footer {
   font-family: 'Franklin Gothic Medium';
 }
 
+/* id de la imagen dinámica del clima */
+#icon-clima {
+  vertical-align: middle;
+  border-style: 2;
+  }
+ 
 /*--------------------------------------------------------------------------------*/
 /* Configuración del FOOTER -- contactenos, enlaces y suscripcion con grid y flex */
 /*--------------------------------------------------------------------------------*/

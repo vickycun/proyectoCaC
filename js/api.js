@@ -1,6 +1,6 @@
 const myClima = document.querySelector("#clima");
 
-fetch("https://api.weatherbit.io/v2.0/current?lang=es&city=Bariloche&country=AR&key=c62a6e3c320440f283903d278708d582")
+fetch("https://api.weatherbit.io/v2.0/current?lang=es&city=Bariloche&country=AR&key=06f893dddd5c48a0a9855c22218cbc7b")
   .then((response) => {
     if (!response.ok) {
       throw new Error('HTTP error, status = ${response.status}');
@@ -8,21 +8,19 @@ fetch("https://api.weatherbit.io/v2.0/current?lang=es&city=Bariloche&country=AR&
     return response.json();
   })
   .then((dat) => {
-    //console.log(dat);
-    //console.log(dat.data[0].city_name);
-    
     const textClima = document.createElement("p");
-    const nameElement = document.createElement("strong");
-    nameElement.textContent = `${dat.data[0].city_name} | ${dat.data[0].temp} grados | ${dat.data[0].weather.description}`;
-    textClima.textContent = nameElement.innerHTML
-    myClima.appendChild(textClima);
+    const imgElement = document.createElement("img");
+
+    imgElement.id = "icon-clima"; 
+    imgElement.src = `img/icons/${dat.data[0].weather.icon}.png`;
+    imgElement.width = "24";
     
+    textClima.innerHTML = `El clima en ${dat.data[0].city_name} es de ${dat.data[0].temp} grados |  ${dat.data[0].weather.description}`;
+    textClima.appendChild(imgElement);
+    myClima.appendChild(textClima);
   })
   .catch((error) => {
     const textClima = document.createElement("p");
-    const nameElement = document.createElement("strong");
-    nameElement.textContent = 'El servicio del clima en Bariloche no está disponible en este momento.'
-    textClima.textContent = nameElement.innerHTML;
+    textClima.innerHTML = "El servicio del clima en Bariloche no está disponible en este momento.";
     myClima.appendChild(textClima);
-    //document.body.insertBefore(p, myClima);
   });
