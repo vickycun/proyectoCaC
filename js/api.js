@@ -1,6 +1,6 @@
 const miClima = document.querySelector("#clima");
 
-fetch("https://api.weatherbit.io/v2.0/current?lang=es&city=Bariloche&country=AR&key=06f893dddd5c48a0a9855c22218cbc7b")
+fetch("https://api.weatherbit.io/v2.0/current?lang=es&city=Bariloche&country=AR&key=c62a6e3c320440f283903d278708d582")
   .then((response) => {
     if (!response.ok) {
       throw new Error('HTTP error, status = ${response.status}');
